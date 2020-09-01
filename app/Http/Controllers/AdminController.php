@@ -1,0 +1,30 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: nimeshjayasankha
+ * Date: 8/14/20
+ * Time: 8:38 PM
+ */
+
+namespace App\Http\Controllers;
+
+
+use App\Event;
+use App\EventCategory;
+use App\EventImage;
+use App\Victory;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class AdminController extends Controller
+{
+
+    public function dashboard(){
+
+        $eventCount=Event::where('status',1)->count('idevent');
+        $victoryCount=Victory::where('status',1)->count('idvictory');
+        return view('administrator.home',['eventCount'=>$eventCount,'victoryCount'=>$victoryCount]);
+    }
+
+}
