@@ -27,6 +27,8 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('contact-us', 'ContactUsController@contactUsIndex')->name('contact-us');
     Route::get('victories', 'VictoryController@victories')->name('victories');
     Route::get('news', 'NewsController@news')->name('news');
+    Route::get('victory-view', 'VictoryController@show')->name('victory-view');
+    Route::get('news-view', 'NewsController@show')->name('news-view');
 
 
     Route::get('about', function () {
@@ -90,7 +92,6 @@ Route::group(['prefix' => '{language}'], function () {
         Route::post('victory-upload', 'VictoryController@upload')->name('victory-upload');
         Route::post('victory-deleteImage', 'VictoryController@deleteImage')->name('victory-deleteImage');
         Route::post('edit-victory-upload', 'VictoryController@editImage')->name('edit-victory-upload');
-        Route::get('victory-view', 'VictoryController@show')->name('victory-view');
 
         //News Management
         Route::get('add-news', 'NewsController@addNews')->name('add-news');
@@ -106,7 +107,6 @@ Route::group(['prefix' => '{language}'], function () {
         Route::post('news-upload', 'NewsController@upload')->name('news-upload');
         Route::post('news-deleteImage', 'NewsController@deleteImage')->name('news-deleteImage');
         Route::post('edit-news-upload', 'NewsController@editImage')->name('edit-news-upload');
-        Route::get('news-view', 'NewsController@show')->name('news-view');
 
         Route::get('/logout', function () {
             \Illuminate\Support\Facades\Auth::logout();

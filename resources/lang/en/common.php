@@ -15,7 +15,7 @@ return [
 
 
     'whoWeAre-heading'=>'WHO WE ARE',
-    'whoWeAre-description1'=>'SERD(Services for Empowerment and Rehabilitation of Disabled Children amd families) is an Organization (an institution focused on specially needed children) registered under the enactment of social activities of the WESTERN Province –Sentence No., 7-by the No : WP/SSD/G/DH/2011/08.',
+    'whoWeAre-description1'=>'SERD(Services for Empowerment and Rehabilitation of Disabled Children and families) is an Organization (an institution focused on specially needed children) registered under the enactment of social activities of the WESTERN Province –Sentence No., 7-by the No : WP/SSD/G/DH/2011/08.',
     'whoWeAre-description2'=>'In addition, it was registered under the act of safeguarding the rights of specially needed children with the No : MSS/NSPD/R/167.It is situated in Gampaha District in the Secretariat Division of Waragoda, at No.,519/4, 3rd Lane, Bonlandwatta.',
 
     'whatWeDo-heading'=>'WHAT WE DO',
