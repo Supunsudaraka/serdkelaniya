@@ -2,112 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcf6172f-8d6e-4de7-a94c-fc3bd51c7d84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/about-us.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/aboutUs.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/about_img.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/obj-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/paralax-child.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d14955a0a4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d149c1f2ce.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d152ce71b1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d154cb2885.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d1567e18b7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d17638d03d.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d184a64201.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d184cd2065.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d1f7d9fdc8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d1f95f37e1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d321652e01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d321684b3a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d325120711.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d32514e293.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d35cc943c0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/activity/5f4d42948eb17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f48d54125a1c.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f48d5444d83a.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f48d5c34ff39.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f48d60d9e541.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f48d73bcebea.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f48d779b57f4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f48d77a14f18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f48d7c165109.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f48d7c62b35c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49c83e3b704.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49c8404e043.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49c9b805a83.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49c9b888013.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49c9ba526bb.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49c9bb71232.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49c9bc293c6.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49c9bd14600.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49c9bd97285.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49c9be1edf7.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cac3394b7.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cac3ca026.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cac4e0aa1.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cac58d46b.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cac649d2f.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cac6ca333.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cacdc66ea.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cad3bd025.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cad7974c3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cada12195.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cbcb5d472.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cbccdf5b9.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cbcddf185.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f49cbcf3fd0f.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4c5fb2acf26.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4c5fb59b8a3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4c6220357b6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4c622070807.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4c699944af1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4c6999910a0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4c6999c3969.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d1443aeeaa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d2825368b1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d284c1c8fd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d292151864.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d2b2a5c728.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d2c5ead605.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d2e57196a5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d2ec268fb2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d2f6fc32e5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d2f82700a5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d2f829a5b0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/event/5f4d3574733da.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/news/5f4d039918ba1.parts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/news/5f4d039e82dd4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/news/5f4d043d68e45.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/news/5f4d4bdb6d64f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/news/5f4d4bdd1d1e4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/11598673164SeXfep38RHJr2r1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/2159867329435Fq1bOFgOqVAHh.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/31598673491Y120WhDSNOjwu20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6951da57d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c696bc6634.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c696c18eab.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c696c502f9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c696c83564.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c69f089d0f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6a2bc47e8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6a2c156cd.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6a2c5f9e2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6a2c99dcb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6c47ac419.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6c47dc113.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6c4814594.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6c549adc5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6c54c87c4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/uploads/victory/5f4c6c54f3da8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/win-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/win-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/myAssets/images/winner.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources.zip" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b9a783d9b43fee50fd28f56dbd1856d2608f305" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b9a783d9b43fee50fd28f56dbd1856d2608f305" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c4699138119763f94fcbe02a3c47294582926f9f" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c4699138119763f94fcbe02a3c47294582926f9f" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/en/common.php" afterPath="$PROJECT_DIR$/resources/lang/en/common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/lang/si/common.php" afterPath="$PROJECT_DIR$/resources/lang/si/common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -125,7 +22,7 @@
       <file leaf-file-name="common.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lang/en/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
+            <state relative-caret-position="935">
               <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="58" selection-end-column="33" />
               <folding />
             </state>
@@ -135,8 +32,8 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -185,7 +82,7 @@
       <file leaf-file-name="common_styles.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/includes/common_styles.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="697">
               <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
               <folding />
             </state>
@@ -195,7 +92,7 @@
       <file leaf-file-name="news.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/news.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
+            <state relative-caret-position="6086">
               <caret line="358" column="50" lean-forward="false" selection-start-line="358" selection-start-column="38" selection-end-line="358" selection-end-column="50" />
               <folding />
             </state>
@@ -215,8 +112,8 @@
       <file leaf-file-name="common.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lang/si/common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+            <state relative-caret-position="2006">
+              <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -347,6 +244,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -451,7 +349,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -464,6 +361,7 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Laravel 5.8-customized-emplty" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///opt/lampp/htdocs/serdNew/app/Http/Controllers/VictoryController.php" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -586,18 +484,27 @@
       <workItem from="1598965522462" duration="1562000" />
       <workItem from="1598967793424" duration="1591000" />
       <workItem from="1598976349719" duration="1810000" />
-      <workItem from="1599053701831" duration="1428000" />
+      <workItem from="1599053701831" duration="1511000" />
+      <workItem from="1599244889008" duration="7000" />
     </task>
+    <task id="LOCAL-00001" summary="small error fix">
+      <created>1599055171625</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599055171625</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174981000" />
+    <option name="totallyTimeSpent" value="175071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21406959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21709532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="SonarLint" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -625,6 +532,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="small error fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="small error fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -893,7 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5066">
           <caret line="298" column="65" lean-forward="false" selection-start-line="298" selection-start-column="65" selection-end-line="298" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,13 +831,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/pen/copy-location.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2312">
-          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/pen/copy-location.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4896">
@@ -946,7 +850,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/includes/common_styles.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="697">
           <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
           <folding />
         </state>
@@ -954,7 +858,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/news.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="6086">
           <caret line="358" column="50" lean-forward="false" selection-start-line="358" selection-start-column="38" selection-end-line="358" selection-end-column="50" />
           <folding />
         </state>
@@ -962,7 +866,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/en/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
+        <state relative-caret-position="935">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="58" selection-end-column="33" />
           <folding />
         </state>
@@ -970,16 +874,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/si/common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        <state relative-caret-position="2006">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
