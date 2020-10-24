@@ -11,7 +11,6 @@ namespace App\Http\Controllers;
 
 use App\Event;
 use App\EventCategory;
-use App\EventImage;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -30,13 +29,4 @@ class EventController extends Controller
         $event = Event::find(intval($eventId));
         return view('event.view',['event'=>$event]);
     }
-
-
-
-
-
-
-
-
-
 }

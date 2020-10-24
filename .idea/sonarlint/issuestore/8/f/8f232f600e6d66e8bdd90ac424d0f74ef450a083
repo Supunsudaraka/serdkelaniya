@@ -1,9 +1,0 @@
-
-c	php:S1192"GDefine a constant instead of duplicating this literal "newsId" 3 times.(è¹›æ8ˆë¡¦Ä.
-i	php:S11920"MDefine a constant instead of duplicating this literal "eDescription" 4 times.(â®§ß8„ÉŸ¦Ä.
-d	php:S1192W"HDefine a constant instead of duplicating this literal "success" 8 times.(ñ’¢Í8„ÉŸ¦Ä.
-Qphp:S121â"0Add curly braces around the nested statement(s).(ñ–Âèùÿÿÿÿ8„ÉŸ¦Ä.
-h	php:S1192!"GDefine a constant instead of duplicating this literal "idnews" 5 times.(þþÅµùÿÿÿÿ8ˆë¡¦Ä.
-Kphp:S121 "0Add curly braces around the nested statement(s).(ò¯ËÜ8„ÉŸ¦Ä.
-g	php:S1192/"FDefine a constant instead of duplicating this literal "eName" 4 times.(Ñ¬ÑÐûÿÿÿÿ8„ÉŸ¦Ä.
-Lphp:S121ä"0Add curly braces around the nested statement(s).(µ®î 8„ÉŸ¦Ä.

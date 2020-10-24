@@ -121,6 +121,135 @@
 		.teamImage{
 			border: 5px solid #cfc7c1;
 		}
+		.box {
+			border-radius: 3px;
+			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+			padding: 10px 25px;
+			text-align: right;
+			display: block;
+			margin-top: 60px;
+		}
+		.box-icon {
+			background-color: #57a544;
+			border-radius: 50%;
+			display: table;
+			height: 100px;
+			margin: 0 auto;
+			width: 100px;
+			margin-top: -61px;
+		}
+		.box-icon span {
+			color: #fff;
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+		}
+		.info h4 {
+			font-size: 26px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		.info > p {
+			color: #717171;
+			font-size: 16px;
+			padding-top: 10px;
+			text-align: justify;
+		}
+		.info > a {
+			background-color: #03a9f4;
+			border-radius: 2px;
+			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+			color: #fff;
+			transition: all 0.5s ease 0s;
+		}
+		.info > a:hover {
+			background-color: #0288d1;
+			box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+			color: #fff;
+			transition: all 0.5s ease 0s;
+		}
+
+
+		.CustomCard {
+			padding-top: 20px;
+			margin: 10px 0 20px 0;
+			background-color: rgba(214, 224, 226, 0.2);
+			border-top-width: 0;
+			border-bottom-width: 2px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 15px;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			box-shadow: none;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		.CustomCard.hoverCustomCard {
+			position: relative;
+			padding-top: 0;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.CustomCard.hoverCustomCard .CustomCardheader {
+			background-size: cover;
+			height: 85px;
+		}
+
+		.CustomCard.hoverCustomCard .avatar {
+			position: relative;
+			top: -65px;
+			margin-bottom: -50px;
+		}
+
+		.CustomCard.hoverCustomCard .avatar img {
+			width: 160px;
+			height: 160px;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			border: 5px solid rgba(255,255,255,0.5);
+		}
+
+		.CustomCard.hoverCustomCard .info {
+			padding: 4px 8px 10px;
+		}
+
+		.CustomCard.hoverCustomCard .info .desc {
+			overflow: hidden;
+			font-size: 12px;
+			line-height: 20px;
+			color: #737373;
+			text-overflow: ellipsis;
+		}
+
+		.CustomCard.hoverCustomCard .bottom {
+			padding: 20px 5px;
+			margin-bottom: -6px;
+			text-align: center;
+		}
+
+         .managerMsg::after{
+            content:'\"';
+            font-size: 1rem;
+            font-weight: 800;
+            position: relative;
+            bottom: 0px;
+        }
+
+        .managerMsg::before{
+            content:'\"';
+            font-size: 1rem;
+            font-weight: 1000;
+            position: relative;
+            margin:0px;
+            padding:0px;
+        }
+
+		.btn{ border-radius: 50%; width:30px; height:30px; line-height:18px;  }
 
 	</style>
 @endsection
@@ -337,156 +466,97 @@
 
 
 
-	{{--<section class="xs-content-section-padding">--}}
-		{{--<div class="container">--}}
+	<section class="xs-content-section-padding">
+		<div class="container">
 
-			{{--<div class="row">--}}
+			<div class="row">
 
-				{{--<div class="col-lg-2">--}}
+				<div class="col-lg-2">
 
-				{{--</div>--}}
-				{{--<div class="col-lg-8">--}}
-					{{--<h2 style="text-align: center">{{__('common.Main Activities Implements During Last Year')}}</h2>--}}
-					{{--<div class="progress">--}}
+				</div>
+				<div class="col-lg-8">
+					<h2 style="text-align: center">{{__('common.Future Plan')}}</h2>
+					<div class="progress">
 
-					{{--</div>--}}
-				{{--</div>--}}
-				{{--<div class="col-lg-2">--}}
+					</div>
+				</div>
+				<div class="col-lg-2">
 
-				{{--</div>--}}
-			{{--</div>--}}
-			{{--<br>--}}
-			{{--<div class="row">--}}
-				{{--<div class="col-lg-12 col-xl-12 ">--}}
-					{{--<div class="p-5 bg-white shadow rounded">--}}
-						{{--<!-- Bootstrap carousel-->--}}
-						{{--<div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">--}}
-							{{--<!-- Bootstrap carousel indicators [nav] -->--}}
-							{{--<ol class="carousel-indicators mb-0">--}}
-								{{--<li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>--}}
-								{{--<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>--}}
-								{{--<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>--}}
-								{{--<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>--}}
-								{{--<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>--}}
-								{{--<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>--}}
-								{{--<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>--}}
-								{{--<li data-target="#carouselExampleIndicators" data-slide-to="7"></li>--}}
-								{{--<li data-target="#carouselExampleIndicators" data-slide-to="8"></li>--}}
-								{{--<li data-target="#carouselExampleIndicators" data-slide-to="9"></li>--}}
-
-							{{--</ol>--}}
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-lg-12 col-xl-12 ">
+					<div class="p-5 bg-white shadow rounded">
+						<!-- Bootstrap carousel-->
+						<div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
+							<!-- Bootstrap carousel indicators [nav] -->
+							<ol class="carousel-indicators mb-0">
+								<li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
 
 
-							{{--<!-- Bootstrap inner [slides]-->--}}
-							{{--<div class="carousel-inner px-5 pb-4">--}}
-								{{--<!-- Carousel slide-->--}}
-								{{--<div class="carousel-item active">--}}
-									{{--<div class="media">--}}
-
-										{{--<div class="media-body ml-3">--}}
-										{{--<h5 style="text-align: center">Maintained a nursery school to provide them with Pre-school Education.</h5>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-
-								{{--<!-- Carousel slide-->--}}
-								{{--<div class="carousel-item">--}}
-									{{--<div class="media">--}}
-
-										{{--<div class="media-body ml-3">--}}
-											{{--<h5 style="text-align: center">Imparted them Special Education.</h5>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-
-								{{--<!-- Carousel slide-->--}}
-								{{--<div class="carousel-item">--}}
-									{{--<div class="media">--}}
-
-										{{--<div class="media-body ml-3">--}}
-											{{--<h5 style="text-align: center">Conducted Programs of Physiotherapy, Speech Therapy & Occupational Therapy.</h5>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-
-								{{--<div class="carousel-item">--}}
-									{{--<div class="media">--}}
-
-										{{--<div class="media-body ml-3">--}}
-											{{--<h5 style="text-align: center">Conducted programs of Vocational Training.</h5>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-
-								{{--<div class="carousel-item">--}}
-									{{--<div class="media">--}}
-
-										{{--<div class="media-body ml-3">--}}
-											{{--<h5 style="text-align: center">Introduced programs on improving  Aesthetic and Cultural concepts.</h5>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-
-								{{--<div class="carousel-item">--}}
-									{{--<div class="media">--}}
-
-										{{--<div class="media-body ml-3">--}}
-											{{--<h5 style="text-align: center">Organized sports & recreational programs.</h5>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-
-								{{--<div class="carousel-item">--}}
-									{{--<div class="media">--}}
-
-										{{--<div class="media-body ml-3">--}}
-											{{--<h5 style="text-align: center">Organized a broad range of Social Programs.</h5>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-
-								{{--<div class="carousel-item">--}}
-									{{--<div class="media">--}}
-
-										{{--<div class="media-body ml-3">--}}
-											{{--<h5 style="text-align: center">Maintained a Day Care Service.</h5>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
+							</ol>
 
 
-								{{--<div class="carousel-item">--}}
-									{{--<div class="media">--}}
+							<!-- Bootstrap inner [slides]-->
+							<div class="carousel-inner px-5 pb-4">
+								<!-- Carousel slide-->
+								<div class="carousel-item active">
+									<div class="media">
 
-										{{--<div class="media-body ml-3">--}}
-											{{--<h5 style="text-align: center">Activated a number of additional special programs to improve their living conditions.</h5>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
+										<div class="media-body ml-3">
+										<h5 style="text-align: center">{{__('common.plan-1')}}</h5>
+										</div>
+									</div>
+								</div>
+
+								<!-- Carousel slide-->
+								<div class="carousel-item">
+									<div class="media">
+
+										<div class="media-body ml-3">
+											<h5 style="text-align: center">{{__('common.plan-2')}}</h5>
+										</div>
+									</div>
+								</div>
+
+								<!-- Carousel slide-->
+								<div class="carousel-item">
+									<div class="media">
+
+										<div class="media-body ml-3">
+											<h5 style="text-align: center">{{__('common.plan-3')}}</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="carousel-item">
+									<div class="media">
+
+										<div class="media-body ml-3">
+											<h5 style="text-align: center">{{__('common.plan-4')}}</h5>
+										</div>
+									</div>
+								</div>
 
 
-								{{--<div class="carousel-item">--}}
-									{{--<div class="media">--}}
 
-										{{--<div class="media-body ml-3">--}}
-											{{--<h5 style="text-align: center">Recently we have introduced Cookery Classes for them to improve their day to day activities.</h5>--}}
-										{{--</div>--}}
-									{{--</div>--}}
-								{{--</div>--}}
-
-							{{--</div>--}}
+							</div>
 
 
-							{{--<!-- Bootstrap controls [dots]-->--}}
+							<!-- Bootstrap controls [dots]-->
 
-						{{--</div>--}}
-					{{--</div>--}}
-				{{--</div>--}}
-			{{--</div>--}}
-		{{--</div>--}}
-		{{--</div><!-- .row end -->--}}
-		{{--</div><!-- .container end -->--}}
-	{{--</section>--}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div><!-- .row end -->
+		</div><!-- .container end -->
+	</section>
 	<!-- team section -->
 	<section class="xs-section-padding bg-gray">
 	<div class="container">
@@ -514,6 +584,49 @@
 
 	</div><!-- .container end -->
 </section>	<!-- End team section -->
+
+
+
+
+	<section class="xs-content-section-padding">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-2">
+				</div>
+				<div class="col-lg-8">
+					<h2 style="text-align: center">{{__('common.Special Message of the Managing Director')}}</h2>
+					<div class="progress">
+
+					</div>
+				</div>
+				<div class="col-lg-2">
+				</div>
+			</div>
+			<br>
+
+
+			<div class="container">
+				<div class="row">
+
+					<div class="col col-md-12 rightIn" >
+						<div class="CustomCard hoverCustomCard">
+							<div class="CustomCardheader text-white btn-primary">
+
+							</div>
+							<div class="avatar">
+								<img  class="teamImage"  src="{{\Illuminate\Support\Facades\URL::asset('myAssets/images/team/ceo.jpeg')}}">	</div>
+							<div class="">
+								<p class="managerMsg">{!! __('common.mngMessage') !!}</div>
+							</div>
+
+						</div>
+					</div>
+
+			</div>
+
+		</div><!-- .container end -->
+	</section>	<!-- End video popup section section -->
 
 
 </main>

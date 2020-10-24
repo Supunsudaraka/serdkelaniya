@@ -75,6 +75,7 @@ return [
     'Our Vision'=>'Our Vision',
     'Our Values'=>'Our Values',
     'Our Team'=>'Our Team',
+    'Special Message of the Managing Director'=>'Special Message of the Managing Director',
     'Main Activities Implements During Last Year'=>'Main Activities Implements During Last Year',
     'Integrity'=>'Integrity',
     'Empowerment'=>'Empowerment',
@@ -83,7 +84,11 @@ return [
     'Our Objectives'=>'Our Objectives',
     'Leave a Message Here'=>'Leave a Message Here',
     'Send Message'=>'Send Message',
-
+    'Future Plan'=>'Future Plan',
+    'plan-1'=>'Creating a special school to suit the needs of children and adults with special needs.',
+    'plan-2'=>'Creating employment opportunities for children with special needs within the institution to make them a non-social group.',
+    'plan-3'=>'Providing a local and foreign market.',
+    'plan-4'=>'Providing a market for exporting their products.',
     'aboutUs-text'=>'Give a helping hand for poor people',
     'ourMission-text'=>'Our mission is to take all steps necessary for the inclusion of all children with disabilities into mainstream of social life .so that their right to a life in dignity is protected and promoted.',
     'ourVision-text'=>'Our vision is to afford equal rights and opportunities to participate fully in his or her community with active and equal membership in society regardless of age or severity of impairment, disability of each and every child to be empowered to communicate his or her requirements and to make informed decisions about all of his or her life.',
@@ -99,6 +104,19 @@ return [
     'objective-10'=>'Mainstream child rights approach in programming',
     'director-text'=>'Director of SERD',
     'contactUs-heading'=>'Getting Touch With Us',
+
+    'mngMessage'=> 'UN convention on the children with special needs is an international human rights treaty.<br/>
+        In accordance with that, the disability of a person is a conception or an aspiration that grow gradually in society.<br/>
+        Disability is born as a result of the interactions as obstacles and barriers when attempting to involve freely and trying to interfere fully or partially,
+        when certain activities are going to be happen in society. If you had summed it up, it’d be misunderstanding and general ignorance from the public as well as the environment.<br/>
+        Under these circumstances not only the disable person, but also the family members of him/her will become socially under pressure.<br/>
+I       became poignantly aware of the problems parents face when trying to obtain services—and even basic human rights for their special needs child.<br/>
+         This discrimination against basic human rights compelled me to start Special
+         Needs Network to promote social justice, equality, and dignity for children with disabilities.<br/>
+
+We strive to support community integration for individuals with special needs towards
+the goal of living independent, productive, and joyful lives. We advocate for stable and
+healthy environments individuals with special needs and their families.',
 
     'victoryName'=>'Victory Name',
     'victoryDescription'=>'Victory Description',
