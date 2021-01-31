@@ -1,8 +1,8 @@
 
 
 /*
-Author: XpeedStudio
-Author URI: http://themeforest.net/user/XpeedStudio/portfolio
+Author: hdhdhdhdhdhdd
+Author URI: http://thdthdthdthd.net/user/hdhdhdhdhdhdd/portfolio
 */
 
 /* Portrait tablets and medium desktops */
@@ -10,7 +10,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	body {
 		font-size: 14px;;
 	}
-	.header-transparent .nav-menu li a, 
+	.header-transparent .nav-menu li a,
 	.xs-box .nav-menu li a {
 		padding: 60px 9px;
 	}
@@ -81,7 +81,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.xs_nav-portrait .nav-menus-wrapper-close-button {
 		margin: 0 0 0 auto;
 	}
-	.header-transparent .nav-brand, 
+	.header-transparent .nav-brand,
 	.xs-box .nav-brand {
 		filter: none;
 		min-height: auto;
@@ -90,7 +90,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
-	.header-transparent .nav-menu li a, 
+	.header-transparent .nav-menu li a,
 	.xs-box .nav-menu li a {
 		padding: 15px 15px;
 		color: #333333;
@@ -164,7 +164,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.xs-feature-content, .xs-feature-content-v2 {
 		padding: 90px 20px;
 	}
-	.xs-feature-content h2, 
+	.xs-feature-content h2,
 	.xs-feature-content-v2 h2 {
 		font-size: 2.28571em;
 		margin-bottom: 0;
@@ -387,16 +387,16 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	.xs-blog-post-comment.xs-padding-40 {
 		padding: 30px;
 	}
-	.xs-post-footer .post-tags, 
-	.xs-post-footer .post-author, 
-	.xs-author-block .post-tags, 
+	.xs-post-footer .post-tags,
+	.xs-post-footer .post-author,
+	.xs-author-block .post-tags,
 	.xs-author-block .post-author {
 		float: none;
 		width: 100%;
 	}
-	.xs-post-footer .share-items, 
-	.xs-post-footer .post-content, 
-	.xs-author-block .share-items, 
+	.xs-post-footer .share-items,
+	.xs-post-footer .post-content,
+	.xs-author-block .share-items,
 	.xs-author-block .post-content {
 		float: none;
 		width: 100%;
