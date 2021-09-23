@@ -34,7 +34,8 @@ return [
     'testimonialHeading'=>'Testimonial',
 
     //Footer
-    'serdAddress'=>'No,519/4,3rd Lane,Bonlandwatta.',
+    'serdAddress'=> '519/4, Bonland Estate 3rdLane, Waragoda Road, Kelaniya',
+    'serdTel'=> '0112912995',
     'Links'=>'Links',
     'Home'=>'Home',
     'Victories'=>'Victories',

@@ -41,7 +41,7 @@
                     <h3 class="widget-title">{{__('common.Contact Us')}}</h3>
                     <ul class="xs-info-list">
                         <li><i class="fa fa-home bg-red"></i>{{__('common.serdAddress')}}</li>
-                        <li><i class="fa fa-phone bg-green"></i>+(94) 77 333 9231</li>
+                        <li><i class="fa fa-phone bg-green"></i>{{ __('common.serdTel') }}</li><br/>
                         <li><i class="fa fa-envelope-o bg-blue"></i><a href="mailto:yourname@domain.com">serd@gmail.com
                                 </a></li>
                     </ul><!-- .xs-list-with-icon END -->

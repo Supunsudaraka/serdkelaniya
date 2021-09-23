@@ -226,7 +226,7 @@
                                             <div class="scroll-animations">
                                                 <div class="animated">
                                                     <i style="font-size: 40px" class="fa fa-phone" aria-hidden="true"></i>
-                                                    <h5 style="padding-top: 11px;padding-bottom: 11px">+(94) 77 333 9231</h5>
+                                                    <h5 style="padding-top: 11px;padding-bottom: 11px">{{ __('common.serdTel') }}</h5>
                                                 </div>
                                             </div>
 
