@@ -397,7 +397,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-4 col-md-4 col-sm-12">
                                                             <img style="height: 150px"
-                                                                 src="{{ \Illuminate\Support\Facades\URL::asset('myAssets/images/uploads/victory/'.$victory ->images->first()->image)}}"
+                                                                 src="{{ $victory->getFirstImage()}}"
                                                                  alt="Card image cap">
                                                         </div>
                                                         <div class="col-lg-8">

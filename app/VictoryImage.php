@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Classes\Media;
 use Illuminate\Database\Eloquent\Model;
 
 class VictoryImage extends Model
@@ -11,5 +12,9 @@ class VictoryImage extends Model
 
     public function victory(){
         return $this->belongsTo(Victory::class,'idvictory');
+    }
+
+    public function getPath(){
+        return Media::getUploadedPath().'/victory/'.$this->image;
     }
 }

@@ -158,7 +158,7 @@
                             @foreach($activity->images as $image)
                                 <div class="slide">
                                     <img style="width: 940px;height: 528.75px"
-                                         src="{{ \Illuminate\Support\Facades\URL::asset('myAssets/images/uploads/activity/'.$image->image)}}"
+                                         src="{{ $image->getPath() }}"
                                          alt="Image">
                                 </div>
                             @endforeach

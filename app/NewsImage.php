@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Classes\Media;
 use Illuminate\Database\Eloquent\Model;
 
 class NewsImage extends Model
@@ -11,5 +12,9 @@ class NewsImage extends Model
 
     public function news(){
         return $this->belongsTo(News::class,'idnews');
+    }
+
+    public function getPath(){
+        return Media::getUploadedPath().'/news/'.$this->image;
     }
 }

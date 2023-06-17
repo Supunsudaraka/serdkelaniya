@@ -122,7 +122,7 @@
                                                 <div class="card">
                                                     <!-- Card image -->
                                                         <div class="view overlay">
-                                                            <img style="height: 231px;width: 348px" class="card-img-top" src="{{ URL::asset('myAssets/images/uploads/event/'.$getImage->image)}}"
+                                                            <img style="height: 231px;width: 348px" class="card-img-top" src="{{ $getImage->getPath() }}"
                                                                  alt="Card image cap">
                                                             </div>
                                                     <div class="card-body">

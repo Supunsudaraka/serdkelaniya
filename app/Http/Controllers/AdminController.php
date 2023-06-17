@@ -15,6 +15,10 @@ use App\Victory;
 class AdminController extends Controller
 {
 
+    public function index(){
+        return view('administrator.login');
+    }
+
     public function dashboard(){
 
         $eventCount=Event::where('status',1)->count('idevent');

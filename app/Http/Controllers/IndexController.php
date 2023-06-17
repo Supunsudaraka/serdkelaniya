@@ -27,4 +27,8 @@ class IndexController extends Controller
         return redirect()->route($request['currentRoute'],['language'=>App::getLocale()]);
     }
 
+    public function about(){
+        return view('about');
+    }
+
 }

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Classes\Media;
 use Illuminate\Database\Eloquent\Model;
 
 class ActivityImage extends Model
@@ -11,5 +12,9 @@ class ActivityImage extends Model
 
     public function activity(){
         return $this->belongsTo(Event::class,'idactivity');
+    }
+
+    public function getPath(){
+        return Media::getUploadedPath().'/activity/'.$this->image;
     }
 }

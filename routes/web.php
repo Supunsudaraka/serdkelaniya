@@ -18,9 +18,7 @@ Route::redirect('/register', '/en');
 Route::group(['prefix' => '{language}'], function () {
     Auth::routes();
 
-    Route::get('/admin', function () {
-        return view('administrator.login');
-    })->name('admin')->middleware('guest');
+    Route::get('/admin', 'AdminController@index')->name('admin');
 
     Route::get('/', 'IndexController@index')->name('welcome');
     Route::get('changeLang', 'IndexController@storeLang')->name('changeLanguage');
@@ -29,11 +27,7 @@ Route::group(['prefix' => '{language}'], function () {
     Route::get('news', 'NewsController@news')->name('news');
     Route::get('victory-view', 'VictoryController@show')->name('victory-view');
     Route::get('news-view', 'NewsController@show')->name('news-view');
-
-
-    Route::get('about', function () {
-        return view('about');
-    })->name('about');
+    Route::get('about', 'IndexController@about')->name('about');
 
     //Event
     Route::get('event-list', 'EventController@listView')->name('event-list');
@@ -107,12 +101,7 @@ Route::group(['prefix' => '{language}'], function () {
         Route::post('news-upload', 'NewsController@upload')->name('news-upload');
         Route::post('news-deleteImage', 'NewsController@deleteImage')->name('news-deleteImage');
         Route::post('edit-news-upload', 'NewsController@editImage')->name('edit-news-upload');
-
-        Route::get('/logout', function () {
-            \Illuminate\Support\Facades\Auth::logout();
-            return redirect()->route('welcome', ['language' => \Illuminate\Support\Facades\App::getLocale()]);
-        })->name('logout');
-
+        Route::get('logout', 'AuthController@logout')->name('logout');
     });
 
 });

@@ -34,8 +34,11 @@ class Victory extends Model
         return $this->{$column} != null ?  $this->{$column} : $this->description_en;
     }
 
-
     public function images(){
         return $this->hasMany(VictoryImage::class,'idvictory');
+    }
+
+    public function getFirstImage(){
+        return $this->images()->first()->getPath();
     }
 }

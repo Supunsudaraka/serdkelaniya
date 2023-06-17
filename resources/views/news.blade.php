@@ -398,7 +398,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-4 col-md-4 col-sm-12">
                                                             <img style="height: 150px"
-                                                                 src="{{ \Illuminate\Support\Facades\URL::asset('myAssets/images/uploads/news/'.$news ->images->first()->image)}}"
+                                                                 src="{{ $news->getFirstImage()}}"
                                                                  alt="Image">
                                                         </div>
                                                         <div class="col-lg-8">

@@ -96,35 +96,83 @@
             background-size: cover;
         }
 
-        .card-img-wrap {
-            overflow: hidden;
-            position: relative;
-        }
+        /* .card-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
 
-        .card-img-wrap:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            /*background: rgba(255, 255, 255, 0.3);*/
-            opacity: 0;
-            transition: opacity .25s;
-        }
+.card-img-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .25s;
+}
 
-        .card-img-wrap img {
-            transition: transform .25s;
-            width: 100%;
-        }
+.card-img-wrap img {
+  transition: transform .25s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-        .card-img-wrap:hover img {
-            transform: scale(1.1);
-        }
+.card-img-wrap:hover img {
+  transform: scale(1.1);
+}
 
-        .card-img-wrap:hover:after {
-            opacity: 1;
-        }
+.card-img-wrap:hover:after {
+  opacity: 1;
+} */
+
+
+
+
+.card-img-wrap {
+  overflow: hidden;
+  position: relative;
+  background-color: #f2f2f2;
+
+}
+
+.card-img-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .25s;
+}
+
+.card-img-wrap img {
+  transition: transform .25s;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: auto;
+  object-fit: contain;
+  background-color: #f2f2f2;
+
+}
+
+.card-img-wrap:hover img {
+  transform: scale(1.1);
+}
+
+.card-img-wrap:hover:after {
+  opacity: 1;
+}
+
+
+
+
+
 
         .testimonial {
             margin: 0;
@@ -424,8 +472,9 @@
                             @if($event->images()->count() > 0)
                             <!-- Card image -->
                             <div class="view overlay">
-                                <div class="card-img-wrap"><img style="height: 231px;width: 348px" class="card-img-top"
-                                                                src="{{ URL::asset('myAssets/images/uploads/event/'.$event->images()->first()->image)}}"
+                                <div class="card-img-wrap">
+                                    <img style="height: 231px;width: 348px" class="card-img-top"
+                                                                src="{{ $event->getFirstImage() }}"
                                                                 alt="Card image cap"></div>
                                 <a href="#">
                                     <div class="mask rgba-white-slight"></div>

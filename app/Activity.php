@@ -34,4 +34,8 @@ class Activity extends Model
     public function images(){
         return $this->hasMany(ActivityImage::class,'idactivity');
     }
+
+    public function getFirstImage(){
+        return $this->images()->first()->getPath();
+    }
 }

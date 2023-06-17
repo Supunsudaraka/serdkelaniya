@@ -31,4 +31,8 @@ class News extends Model
     public function images(){
         return $this->hasMany(NewsImage::class,'idnews');
     }
+
+    public function getFirstImage(){
+        return $this->images()->first()->getPath();
+    }
 }

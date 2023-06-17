@@ -51,7 +51,7 @@
                                 @if($activity->images()->count())
                                 <div class="view overlay">
 
-                                    <img style="height: 231px;width: 348px" class="card-img-top" src="{{ URL::asset('myAssets/images/uploads/activity/'.$activity->images()->first()->image)}}"
+                                    <img style="height: 231px;width: 348px" class="card-img-top" src="{{ $activity->getFirstImage()}}"
                                          alt="Image">
 
                                     <a href="#!">

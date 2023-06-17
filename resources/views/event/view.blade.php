@@ -1,272 +1,244 @@
 @extends('includes.main')
 
 @section('pageSpecificStyles')
-
-
 @endsection
 @section('pageSpecificContent')
     <style>
-        .slider {
-            margin: 0 auto;
-            max-width: 940px;
-        }
-
-        .slide_viewer {
-            height: 340px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .slide_group {
-            height: 100%;
-            position: relative;
-            width: 100%;
-        }
-
-        .slide {
+        .image-viewer {
             display: none;
-            height: 100%;
-            position: absolute;
-            width: 100%;
-        }
-
-        .slide:first-child {
-            display: block;
-        }
-
-        .slide:nth-of-type(1) {
-            background: #D7A151;
-        }
-
-        .slide:nth-of-type(2) {
-            background: #F4E4CD;
-        }
-
-        .slide:nth-of-type(3) {
-            background: #C75534;
-        }
-
-        .slide:nth-of-type(4) {
-            background: #D1D1D4;
-        }
-
-        .slide_buttons {
+            position: fixed;
+            z-index: 9999;
+            top: 0;
             left: 0;
-            position: absolute;
-            right: 0;
+            width: 100%;
+            height: 100%;
             text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow: auto;
+            pointer-events: auto;
         }
 
-        a.slide_btn {
-            color: #474544;
-            font-size: 42px;
-            margin: 0 0.175em;
-            -webkit-transition: all 0.4s ease-in-out;
-            -moz-transition: all 0.4s ease-in-out;
-            -ms-transition: all 0.4s ease-in-out;
-            -o-transition: all 0.4s ease-in-out;
-            transition: all 0.4s ease-in-out;
-        }
-
-        .slide_btn.active, .slide_btn:hover {
-            color: #428CC6;
+        .image-viewer img {
+            max-height: calc(100% - 40px);
+            max-width: calc(100% - 40px);
+            margin: 20px;
             cursor: pointer;
+
         }
 
-        .directional_nav {
-            height: 340px;
-            margin: 0 auto;
-            max-width: 940px;
+        .image-viewer .prev-btn,
+        .image-viewer .next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .image-viewer .prev-btn {
+            left: 10px;
+        }
+
+        .image-viewer .next-btn {
+            right: 10px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 10px;
+        }
+
+        .grid-item {
             position: relative;
-            top: -340px;
+            overflow: hidden;
+            max-height: 300px;
+            position: relative;
         }
 
-        .previous_btn {
-            bottom: 0;
-            left: 100px;
-            margin: auto;
-            position: absolute;
-            top: 0;
-        }
-
-        .next_btn {
-            bottom: 0;
-            margin: auto;
-            position: absolute;
-            right: 100px;
-            top: 0;
-        }
-
-        .previous_btn, .next_btn {
+        .grid-item:hover {
+            /* Update hover styles to match your design */
             cursor: pointer;
-            height: 65px;
-            opacity: 0.5;
-            -webkit-transition: opacity 0.4s ease-in-out;
-            -moz-transition: opacity 0.4s ease-in-out;
-            -ms-transition: opacity 0.4s ease-in-out;
-            -o-transition: opacity 0.4s ease-in-out;
-            transition: opacity 0.4s ease-in-out;
-            width: 65px;
         }
 
-        .previous_btn:hover, .next_btn:hover {
+        .grid-item:hover::before {
+            content: "Click to view full image";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .grid-item:hover::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .grid-item:hover::before,
+        .grid-item:hover::after {
             opacity: 1;
         }
 
-        @media only screen and (max-width: 767px) {
-            .previous_btn {
-                left: 50px;
-            }
 
-            .next_btn {
-                right: 50px;
-            }
+        .image-viewer .close {
+            color: #fff;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+        .text-section {
+            margin-top: 20px;
+        }
+
+        .text-description {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .text-description h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .text-description p {
+            font-size: 14px;
+            line-height: 1.4;
+            color: #444;
         }
     </style>
 
     <!-- welcome section -->
     <!--breadcumb start here-->
     <section class="xs-banner-inner-section parallax-window"
-             style="background-size: cover;background-image:url({{\Illuminate\Support\Facades\URL::asset('myAssets/images/event/'.$event->category->image)}})">
+        style="background-size: cover;background-image:url({{ \Illuminate\Support\Facades\URL::asset('myAssets/images/event/' . $event->category->image) }})">
         <div class="xs-black-overlay"></div>
         <div class="container">
             <div class="color-white xs-inner-banner-content">
-                <h2 style="text-align: center">{{$event->category->name}}</h2>
+                <h2 style="text-align: center">{{ $event->category->name }}</h2>
             </div>
         </div>
     </section>
-    <!--breadcumb end here--><!-- End welcome section -->
+    <!--breadcumb end here-->
+    <!-- End welcome section -->
 
 
     <main class="xs-main">
-        <!-- video popup section section -->
 
-
-        <!-- video popup section section -->
         <section class="xs-content-section-padding">
             <div class="container">
                 <div class="row text-center">
                     <div class="col-md-12">
-                        <h4>{{$event->name}}</h4>
+                        <h4>{{ $event->name }}</h4>
                     </div>
                 </div>
 
-                @if($event->images()->count() > 0)
-                <div class="slider">
-                    <div class="slide_viewer">
-                        <div class="slide_group">
-                            @foreach($event->images as $image)
-                                <div class="slide">
-                                    <img style="width: 940px;height: 528.75px"
-                                         src="{{ \Illuminate\Support\Facades\URL::asset('myAssets/images/uploads/event/'.$image->image)}}"
-                                         alt="Image">
-                                </div>
-                            @endforeach
-                        </div>
+                @if ($event->images()->count() > 0)
+                    <div class="image-grid">
+                        @foreach ($event->images as $image)
+                            <div class="grid-item">
+                                <img src="{{ $image->getPath() }}" alt="Image 1" onclick="openImageViewer(this)">
+                            </div>
+                        @endforeach
                     </div>
-                </div>
                 @endif
-                <h5 class="py-4 " style="text-align: center">{!! $event->description !!}</h5>
-
+                <div class="text-section">
+                    <div class="text-description">
+                        <div class="py-1 ">{!! $event->description !!}</div>
+                    </div>
+                </div>
             </div>
-        </section>    <!-- End video popup section section -->
+        </section>
 
-
-        <!-- partners section -->
+        <!-- Image viewer : start -->
+        <div id="imageViewer" class="image-viewer">
+            <span class="close" onclick="closeImageViewer()">&times;</span>
+            <img id="imageViewerImg" class="image-viewer-img">
+            <button class="prev-btn" onclick="showPrevImage()">&lt;</button>
+            <button class="next-btn" onclick="showNextImage()">&gt;</button>
+        </div>
+        <!-- Image viewer : end -->
 
     </main>
 
 @endsection
 @section('pageSpecificScript')
     <script>
-        $('.slider').each(function () {
-            var $this = $(this);
-            var $group = $this.find('.slide_group');
-            var $slides = $this.find('.slide');
-            var bulletArray = [];
-            var currentIndex = 0;
-            var timeout;
+        var images = [];
+        var currentIndex = 0;
 
-            function move(newIndex) {
-                var animateLeft, slideLeft;
+        function openImageViewer(element) {
+            var imageSrc = element.src;
+            images = document.querySelectorAll('.grid-item img');
+            currentIndex = Array.from(images).indexOf(element);
 
-                advance();
+            document.getElementById('imageViewerImg').src = imageSrc;
+            document.getElementById('imageViewer').style.display = 'block';
+            document.body.style.overflow = 'hidden';
 
-                if ($group.is(':animated') || currentIndex === newIndex) {
-                    return;
-                }
+            document.getElementById('imageViewerImg').addEventListener('click', showNextImageOnClick);
 
-                bulletArray[currentIndex].removeClass('active');
-                bulletArray[newIndex].addClass('active');
+        }
 
-                if (newIndex > currentIndex) {
-                    slideLeft = '100%';
-                    animateLeft = '-100%';
-                } else {
-                    slideLeft = '-100%';
-                    animateLeft = '100%';
-                }
+        function closeImageViewer() {
+            document.getElementById('imageViewer').style.display = 'none';
+            document.body.style.overflow = '';
+        }
 
-                $slides.eq(newIndex).css({
-                    display: 'block',
-                    left: slideLeft
-                });
-                $group.animate({
-                    left: animateLeft
-                }, function () {
-                    $slides.eq(currentIndex).css({
-                        display: 'none'
-                    });
-                    $slides.eq(newIndex).css({
-                        left: 0
-                    });
-                    $group.css({
-                        left: 0
-                    });
-                    currentIndex = newIndex;
-                });
+        function showNextImageOnClick() {
+            showNextImage();
+        }
+
+        function showPrevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            var prevImageSrc = images[currentIndex].src;
+            document.getElementById('imageViewerImg').src = prevImageSrc;
+        }
+
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            var nextImageSrc = images[currentIndex].src;
+            document.getElementById('imageViewerImg').src = nextImageSrc;
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageViewer();
+            } else if (event.key === 'ArrowLeft') {
+                showPrevImage();
+            } else if (event.key === 'ArrowRight') {
+                showNextImage();
             }
+        });
 
-            function advance() {
-                clearTimeout(timeout);
-                timeout = setTimeout(function () {
-                    if (currentIndex < ($slides.length - 1)) {
-                        move(currentIndex + 1);
-                    } else {
-                        move(0);
-                    }
-                }, 4000);
-            }
-
-            $('.next_btn').on('click', function () {
-                if (currentIndex < ($slides.length - 1)) {
-                    move(currentIndex + 1);
-                } else {
-                    move(0);
-                }
+        const gridItems = document.querySelectorAll('.grid-item');
+        gridItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                openImageViewer(item.querySelector('img'));
             });
-
-            $('.previous_btn').on('click', function () {
-                if (currentIndex !== 0) {
-                    move(currentIndex - 1);
-                } else {
-                    move(3);
-                }
-            });
-
-            $.each($slides, function (index) {
-                var $button = $('<a class="slide_btn">•</a>');
-
-                if (index === currentIndex) {
-                    $button.addClass('active');
-                }
-                $button.on('click', function () {
-                    move(index);
-                }).appendTo('.slide_buttons');
-                bulletArray.push($button);
-            });
-
-            advance();
         });
     </script>
 @endsection

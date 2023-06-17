@@ -8,7 +8,7 @@
 
 namespace App;
 
-
+use App\Classes\Media;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
@@ -40,6 +40,10 @@ class Event extends Model
 
     public function images(){
         return $this->hasMany(EventImage::class,'idevent');
+    }
+
+    public function getFirstImage(){
+        return $this->images()->first()->getPath();
     }
 
 

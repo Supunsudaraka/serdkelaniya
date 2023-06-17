@@ -8,7 +8,7 @@
 
 namespace App;
 
-
+use App\Classes\Media;
 use Illuminate\Database\Eloquent\Model;
 
 class EventImage extends Model
@@ -18,5 +18,9 @@ class EventImage extends Model
 
     public function event(){
         return $this->belongsTo(Event::class,'idevent');
+    }
+
+    public function getPath(){
+        return Media::getUploadedPath().'/event/'.$this->image;
     }
 }
