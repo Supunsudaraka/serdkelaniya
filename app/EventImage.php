@@ -10,6 +10,10 @@ namespace App;
 
 use App\Classes\Media;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\URL;
 
 class EventImage extends Model
 {
@@ -21,6 +25,6 @@ class EventImage extends Model
     }
 
     public function getPath(){
-        return Media::getUploadedPath().'/event/'.$this->image;
+        return Media::getUploadedPath('event',$this);
     }
 }

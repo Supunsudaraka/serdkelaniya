@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Event;
@@ -7,10 +6,14 @@ use App\EventCategory;
 use App\EventImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Traits\UploadTrait;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class AdminEventController extends Controller
 {
-
+    use UploadTrait;
+    
     public function addEvent(){
 
         $eventCategories=EventCategory::where('status',1)->get();
@@ -37,15 +40,11 @@ class AdminEventController extends Controller
 
     public function store(Request $request){
 
-
         $category=$request['category'];
         $eName=$request['eName'];
         $eDescription=$request['eDescription'];
 
-        
-
         $validator = \Validator::make($request->all(), [
-
             'category' => 'required',
             'eDescription' => 'required',
             'eName' => 'required|max:45',
@@ -89,14 +88,8 @@ class AdminEventController extends Controller
 
     function upload(Request $request)
     {
-        $imageName='';
-        if($request->hasFile('file'))
-        {
-            $imageFile = $request->file('file');
-            $imageName = uniqid().'.'.$imageFile->getClientOriginalExtension();
-            $destinationPath = public_path('myAssets/images/uploads/event');
-            $imageFile->move($destinationPath, $imageName);
-        }
+        $file =  $this->uploadFile($request,'event');
+        $imageName = $file['name'];
 
         $upload = new EventImage();
         $upload->idevent = 0;
@@ -109,24 +102,13 @@ class AdminEventController extends Controller
 
     public function deleteImages(Request $request)
     {
-
         $getImages=EventImage::where('idevent',0)->get();
-
         if($getImages!=null){
-
-            foreach ($getImages as $getImage){
-
-
+          foreach ($getImages as $getImage){
                 if ($getImage->image != null || $getImage->image != ""){
-                    $path_old = public_path('myAssets\images\uploads\event/') . $getImage->image;
-
-                    if (file_exists($path_old)) {
-                        unlink($path_old);
-                    }
+                    $this->deleteUploadedImage($getImage,'event');
                     $getImage->delete();
                 }
-
-
             }
         }
 
@@ -136,21 +118,13 @@ class AdminEventController extends Controller
     public function deleteEvent(Request $request){
 
         $eventId=$request['eventId'];
-
         $deleteEventImg=EventImage::where('idevent',$eventId)->get();
-
         foreach ($deleteEventImg as $delete){
 
-
             if ($delete->image != null || $delete->image != ""){
-                $path_old = public_path('myAssets\images\uploads\event') . $delete->image;
-
-                if (file_exists($path_old)) {
-                    unlink($path_old);
-                }
+                $this->deleteUploadedImage($delete,'event');
             }
             $delete->delete();
-
         }
 
         $deleteEvent=Event::find($eventId);
@@ -163,9 +137,6 @@ class AdminEventController extends Controller
 
 
         $idevent=$request['idevent'];
-
-
-
         $getEvent=Event::find($idevent);
 
         return response()->json(['getEvent'=>$getEvent]);
@@ -174,18 +145,10 @@ class AdminEventController extends Controller
     public function deleteImageById(Request $request){
 
         $eventImgId=$request['eventImgId'];
-
         $deleteImg=EventImage::find($eventImgId);
 
-
-
         if ($deleteImg->image != null || $deleteImg->image != ""){
-            $path_old = public_path('myAssets/images/uploads/event') . $deleteImg->image;
-
-            if (file_exists($path_old)) {
-                unlink($path_old);
-            }
-
+           $this->deleteUploadedImage($deleteImg,'event');
         }
         $deleteImg->delete();
 
@@ -196,12 +159,8 @@ class AdminEventController extends Controller
     public function editImage(Request $request){
 
         $idevent=$request['idevent'];
-        if($request->hasFile('file'))
-        {
-            $imageFile = $request->file('file');
-            $imageName = uniqid().'.'.$imageFile->getClientOriginalExtension();
-            $imageFile->move(public_path('myAssets/images/uploads/event'), $imageName);
-        }
+        $file =  $this->uploadFile($request,'event');
+        $imageName = $file['name'];
 
         $upload = new EventImage();
         $upload->idevent = $idevent;

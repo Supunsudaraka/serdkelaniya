@@ -15,6 +15,6 @@ class VictoryImage extends Model
     }
 
     public function getPath(){
-        return Media::getUploadedPath().'/victory/'.$this->image;
+        return Media::getUploadedPath('victory',$this);
     }
 }

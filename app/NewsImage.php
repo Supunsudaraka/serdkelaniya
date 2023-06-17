@@ -15,6 +15,6 @@ class NewsImage extends Model
     }
 
     public function getPath(){
-        return Media::getUploadedPath().'/news/'.$this->image;
+        return Media::getUploadedPath('news',$this);
     }
 }

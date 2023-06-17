@@ -8,7 +8,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Traits\UploadTrait;
 use App\Victory;
 use App\VictoryImage;
 use Illuminate\Http\Request;
@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 
 class VictoryController extends Controller
 {
+    use UploadTrait;
     public function addVictory(){
 
         return view('victory.add-victory');
@@ -140,11 +141,7 @@ class VictoryController extends Controller
         if($deleteVictory!=null){
 
             if ($deleteVictory->image != null || $deleteVictory->image != ""){
-                $path_old = public_path('myAssets/images/uploads/victory/') . $deleteVictory->image;
-
-                if ($path_old) {
-                    unlink($path_old);
-                }
+                $this->deleteUploadedImage($deleteVictory,'victory');
             }
 
             $deleteVictory->delete();
@@ -160,11 +157,8 @@ class VictoryController extends Controller
         foreach ($images as $image){
 
             if ($image->image != null || $image->image != ""){
-                $path = public_path('myAssets\images\uploads\event') . $image->image;
+                $this->deleteUploadedImage($image,'victory');
 
-                if (file_exists($path)) {
-                    unlink($path);
-                }
             }
             $image->delete();
         }
@@ -177,14 +171,8 @@ class VictoryController extends Controller
 
     function upload(Request $request)
     {
-        $imageName='';
-        if($request->hasFile('file'))
-        {
-            $imageFile = $request->file('file');
-            $imageName = uniqid().'.'.$imageFile->getClientOriginalExtension();
-            $destinationPath = public_path('myAssets/images/uploads/victory');
-            $imageFile->move($destinationPath, $imageName);
-        }
+        $file =  $this->uploadFile($request,'victory');
+        $imageName = $file['name'];
 
         $upload = new VictoryImage();
         $upload->idvictory = 0;
@@ -202,11 +190,8 @@ class VictoryController extends Controller
         $image=VictoryImage::find($id);
 
         if ($image->image != null || $image->image != ""){
-            $path = public_path('myAssets\images\uploads\event') . $image->image;
+            $this->deleteUploadedImage($image,'victory');
 
-            if (file_exists($path)) {
-                unlink($path);
-            }
 
         }
         $image->delete();
@@ -217,13 +202,8 @@ class VictoryController extends Controller
     public function editImage(Request $request){
 
         $id=$request['id'];
-        $imageName = "";
-        if($request->hasFile('file'))
-        {
-            $imageFile = $request->file('file');
-            $imageName = uniqid().'.'.$imageFile->getClientOriginalExtension();
-            $imageFile->move(public_path('myAssets/images/uploads/victory'), $imageName);
-        }
+        $file =  $this->uploadFile($request,'victory');
+        $imageName = $file['name'];
 
         $upload = new VictoryImage();
         $upload->idvictory = $id;

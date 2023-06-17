@@ -398,7 +398,7 @@
                                                         <div class="col-lg-4 col-md-4 col-sm-12">
                                                             <img style="height: 150px"
                                                                  src="{{ $victory->getFirstImage()}}"
-                                                                 alt="Card image cap">
+                                                                 alt="{{$victory->name}}">
                                                         </div>
                                                         <div class="col-lg-8">
                                                             <h5 style="text-align: left">{{$victory->name}}</h5>

@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\News;
 use App\NewsImage;
+use App\Traits\UploadTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class NewsController extends Controller
 {
+    use UploadTrait;
     public function addNews(){
 
         return view('news.add');
@@ -127,11 +129,7 @@ class NewsController extends Controller
         if($deleteNews!=null){
 
             if ($deleteNews->image != null || $deleteNews->image != ""){
-                $path_old = public_path('myAssets/images/uploads/news/') . $deleteNews->image;
-
-                if ($path_old) {
-                    unlink($path_old);
-                }
+                $this->deleteUploadedImage($deleteNews,'news');
             }
 
             $deleteNews->delete();
@@ -147,11 +145,8 @@ class NewsController extends Controller
         foreach ($images as $image){
 
             if ($image->image != null || $image->image != ""){
-                $path = public_path('myAssets\images\uploads\event') . $image->image;
+                $this->deleteUploadedImage($image,'news');
 
-                if (file_exists($path)) {
-                    unlink($path);
-                }
             }
             $image->delete();
         }
@@ -164,14 +159,8 @@ class NewsController extends Controller
 
     function upload(Request $request)
     {
-        $imageName='';
-        if($request->hasFile('file'))
-        {
-            $imageFile = $request->file('file');
-            $imageName = uniqid().'.'.$imageFile->getClientOriginalExtension();
-            $destinationPath = public_path('myAssets/images/uploads/news');
-            $imageFile->move($destinationPath, $imageName);
-        }
+        $file =  $this->uploadFile($request,'news');
+        $imageName = $file['name'];
 
         $upload = new NewsImage();
         $upload->idnews = 0;
@@ -189,11 +178,8 @@ class NewsController extends Controller
         $image=NewsImage::find($id);
 
         if ($image->image != null || $image->image != ""){
-            $path = public_path('myAssets\images\uploads\event') . $image->image;
+            $this->deleteUploadedImage($image,'news');
 
-            if (file_exists($path)) {
-                unlink($path);
-            }
 
         }
         $image->delete();
@@ -204,13 +190,8 @@ class NewsController extends Controller
     public function editImage(Request $request){
 
         $id=$request['id'];
-        $imageName = "";
-        if($request->hasFile('file'))
-        {
-            $imageFile = $request->file('file');
-            $imageName = uniqid().'.'.$imageFile->getClientOriginalExtension();
-            $imageFile->move(public_path('myAssets/images/uploads/news'), $imageName);
-        }
+        $file =  $this->uploadFile($request,'news');
+        $imageName = $file['name'];
 
         $upload = new NewsImage();
         $upload->idnews = $id;

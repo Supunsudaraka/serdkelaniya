@@ -7,9 +7,11 @@ use App\ActivityCategory;
 use App\ActivityImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Traits\UploadTrait;
 
 class AdminActivityController extends Controller
 {
+    use UploadTrait;
     public function index(){
 
         $categories = ActivityCategory::where('status',1)->get();
@@ -88,14 +90,8 @@ class AdminActivityController extends Controller
 
     function upload(Request $request)
     {
-        $imageName='';
-        if($request->hasFile('file'))
-        {
-            $imageFile = $request->file('file');
-            $imageName = uniqid().'.'.$imageFile->getClientOriginalExtension();
-            $destinationPath = public_path('myAssets/images/uploads/activity');
-            $imageFile->move($destinationPath, $imageName);
-        }
+        $file =  $this->uploadFile($request,'activity');
+        $imageName = $file['name'];
 
         $upload = new ActivityImage();
         $upload->idactivity = 0;
@@ -117,11 +113,8 @@ class AdminActivityController extends Controller
 
 
                 if ($getImage->image != null || $getImage->image != ""){
-                    $path_old = public_path('myAssets\images\uploads\activity/') . $getImage->image;
+                    $this->deleteUploadedImage($getImage,'activity');
 
-                    if (file_exists($path_old)) {
-                        unlink($path_old);
-                    }
                     $getImage->delete();
                 }
 
@@ -142,11 +135,8 @@ class AdminActivityController extends Controller
 
 
             if ($delete->image != null || $delete->image != ""){
-                $path_old = public_path('myAssets\images\uploads\activity') . $delete->image;
+                $this->deleteUploadedImage($delete,'activity');
 
-                if (file_exists($path_old)) {
-                    unlink($path_old);
-                }
             }
             $delete->delete();
 
@@ -179,11 +169,8 @@ class AdminActivityController extends Controller
 
 
         if ($deleteImg->image != null || $deleteImg->image != ""){
-            $path_old = public_path('myAssets/images/uploads/activity') . $deleteImg->image;
+            $this->deleteUploadedImage($deleteImg,'activity');
 
-            if (file_exists($path_old)) {
-                unlink($path_old);
-            }
 
         }
         $deleteImg->delete();
@@ -195,12 +182,8 @@ class AdminActivityController extends Controller
     public function editImage(Request $request){
 
         $idactivity=$request['idactivity'];
-        if($request->hasFile('file'))
-        {
-            $imageFile = $request->file('file');
-            $imageName = uniqid().'.'.$imageFile->getClientOriginalExtension();
-            $imageFile->move(public_path('myAssets/images/uploads/activity'), $imageName);
-        }
+        $file =  $this->uploadFile($request,'activity');
+        $imageName = $file['name'];
 
         $upload = new ActivityImage();
         $upload->idactivity = $idactivity;

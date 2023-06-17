@@ -15,6 +15,6 @@ class ActivityImage extends Model
     }
 
     public function getPath(){
-        return Media::getUploadedPath().'/activity/'.$this->image;
+        return Media::getUploadedPath('activity',$this);
     }
 }
