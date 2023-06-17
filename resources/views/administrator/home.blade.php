@@ -95,6 +95,8 @@
     }
 
 </style>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+
 <body>
 <main class="xs-main">
     <!-- video popup section section -->
@@ -132,7 +134,13 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 mt-5 ">
+                    <h2 style="text-align: center">Storage </h2>
 
+                    @include('components.pie-chart.index')
+                </div>
+            </div>
 
         </div>
     </section>	<!-- End video popup section section -->
