@@ -38,6 +38,50 @@
 
 
 <style>
+.progress {
+  position: relative;
+  height: 1rem;
+  overflow: hidden;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.progress:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(128, 186, 232, 0), rgba(125, 185, 232, 0));
+  background-repeat: no-repeat;
+  background-position: -100% center;
+  animation: shine 10s infinite;
+}
+
+.progress:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+.progress:nth-child(2) {
+  animation-delay: 1.3s;
+}
+
+.progress:nth-child(3) {
+  animation-delay: 1.9s;
+}
+
+
+@keyframes shine {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+
 
     /*bottom in animation : Start*/
     .bottomIn{
